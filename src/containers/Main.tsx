@@ -1,4 +1,6 @@
 import React from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Splash from "../components/splash/Splash";
 import { Theme } from "../Types/Theme.type";
 
 type Props = {
@@ -6,8 +8,20 @@ type Props = {
 }
 
 class Main extends React.Component<Props> {
+    
     render() {
-        return "this is working";
+        return (
+            <BrowserRouter basename="/">
+                <Switch>
+                    <Route
+                        path="/"
+                        exact
+                        render={() => <Splash />}
+                    />
+                    
+                </Switch>
+            </BrowserRouter>
+        );
     }
 }
 
