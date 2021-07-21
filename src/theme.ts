@@ -1,6 +1,6 @@
-// Theme Presets
+import { Theme, Themes } from "./Types/Theme.type";
 
-const lightTheme = {
+const lightTheme: Theme = {
   name: "light",
   body: "#FFFFFF",
   text: "#343434",
@@ -17,7 +17,7 @@ const lightTheme = {
   avatarShoes: "#ccd2e3",
 };
 
-const darkTheme = {
+const darkTheme: Theme = {
   name: "dark",
   body: "#1D1D1D",
   text: "#FFFFFF",
@@ -34,4 +34,11 @@ const darkTheme = {
   avatarShoes: "#2B2B2B",
 };
 
-export const themes = { light: lightTheme, dark: darkTheme };
+const themes: Themes = { light: lightTheme, dark: darkTheme };
+
+export const getTheme = (themeKey: string): Theme => {
+  if(themeKey === "light") {
+    return themes.light;
+  }
+  return themes.dark;
+}
