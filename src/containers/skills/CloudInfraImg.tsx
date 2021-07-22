@@ -1,4 +1,6 @@
-export default function CloudInfraImg(props) {
+import { ThemeProps } from "../../Types/ThemeProps.type";
+
+export default function CloudInfraImg(props: ThemeProps) {
   const theme = props.theme;
   return (
     <svg

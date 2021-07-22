@@ -1,8 +1,9 @@
 import "./Skills.scss";
 import SkillSection from "./SkillSection";
 import { Fade } from "react-reveal";
+import { ThemeProps } from "../../Types/ThemeProps.type";
 
-export default function Skills(props) {
+export default function Skills(props: ThemeProps) {
   const theme = props.theme;
   return (
     <div className="main" id="skills">

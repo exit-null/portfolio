@@ -1,6 +1,6 @@
-import React from "react";
+import { ThemeProps } from "../../Types/ThemeProps.type";
 
-export default function FullStackImg(props) {
+export default function FullStackImg(props: ThemeProps) {
   const theme = props.theme;
   return (
     <svg
