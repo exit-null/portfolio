@@ -1,5 +1,5 @@
 export type Theme = {
-    name?: string,
+    name: string,
     body?: string,
     text?: string,
     dark?: string,

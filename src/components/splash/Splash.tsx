@@ -39,7 +39,7 @@ class Splash extends React.Component<{}, State> {
 
   render() {
     return this.state.redirect ? 
-      <Redirect to="/home" /> : this.AnimatedSplash()
+      <Redirect to="/portfolio" /> : this.AnimatedSplash()
   }
 }
 

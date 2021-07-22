@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.scss';
 import { ThemeProvider } from "styled-components";
 import { getTheme } from "./theme";
 import { GlobalStyles } from "./global";
@@ -33,7 +32,7 @@ class App extends React.Component<{}, State> {
     return(
       <ThemeProvider theme={getTheme(this.state.theme)}>
         <GlobalStyles />
-        <Main theme={getTheme(this.state.theme)} />
+        <Main {...this.props} theme={getTheme(this.state.theme)} />
       </ThemeProvider>
     );
   }
